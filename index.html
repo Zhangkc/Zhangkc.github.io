@@ -235,6 +235,147 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/03/First-Post/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="KaiserZ">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="KaiserZ">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/03/First-Post/" itemprop="url">First Post</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-03T09:15:51+08:00">
+                2017-11-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>##版本回退工具需求整理</p>
+<p>###升级之前</p>
+<ul>
+<li><p>创建备份目录，默认在D盘，若D盘不存在，则在C盘创建。</p>
+</li>
+<li><p>备份将要被替换的文件，可以按照文件名和路径备份到指定目录<br><br>基本的目录结构如下：</p>
+<pre><code>&gt;bin目录         D:\backup\WSAP\bin &lt;br&gt;
+&gt;cfg目录         D:\backup\WSAP\cfg &lt;br&gt;
+&gt;page目录        D:\backup\WSAP\page&lt;br&gt;
+</code></pre><blockquote>
+<p>ATM_Version.xml D:\backup\ATM_Version.xml</p>
+</blockquote>
+</li>
+<li><p>备份tmp目录时，判断机型，然后根据机型读bat文件对应机型的处理，获得要替换的文件名和路径，将获得的路径字符串中的”C:”替换成”D:\backup”，拷贝原文件到对应路径实现备份。</p>
+</li>
+<li><p>读取.lst文件，获取其中要被操作的配置文件名（一般是在cfg目录下），按文件名备份到指定目录D:\backup\WSAP\cfg</p>
+</li>
+</ul>
+<p>###还原</p>
+<ul>
+<li>遍历备份目录，录将文件路径字符串中的”D:\backup”替换为”C:”,按照路径拷贝回去即可还原。</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/28/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -398,7 +539,7 @@
             
               <a href="/archives">
             
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
