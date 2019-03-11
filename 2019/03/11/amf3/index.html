@@ -95,17 +95,17 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="AMF格式分析AMF是Action Message Format的简写，Adobe推出的一个二进制数据格式。其优点在于数据压缩率高，可以发送复杂数据，比如自引用的数据等。由于最近需要在web上收发这个东西，并且js没有现成解析AMF的库，网上的大部分都是只能解析简单数据，就仔细（并不）研究了一下。 解析AMF分为AMF0和AMF3，AMF3是AMF0的下一个版本，这里我们主要说一下AMF3的解析">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2017/08/28/hello-world/index.html">
+<meta property="og:title" content="amf3">
+<meta property="og:url" content="http://yoursite.com/2019/03/11/amf3/index.html">
 <meta property="og:site_name" content="KaiserZ">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="AMF格式分析AMF是Action Message Format的简写，Adobe推出的一个二进制数据格式。其优点在于数据压缩率高，可以发送复杂数据，比如自引用的数据等。由于最近需要在web上收发这个东西，并且js没有现成解析AMF的库，网上的大部分都是只能解析简单数据，就仔细（并不）研究了一下。 解析AMF分为AMF0和AMF3，AMF3是AMF0的下一个版本，这里我们主要说一下AMF3的解析">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-28T09:29:43.417Z">
+<meta property="og:updated_time" content="2019-03-11T01:26:10.563Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="amf3">
+<meta name="twitter:description" content="AMF格式分析AMF是Action Message Format的简写，Adobe推出的一个二进制数据格式。其优点在于数据压缩率高，可以发送复杂数据，比如自引用的数据等。由于最近需要在web上收发这个东西，并且js没有现成解析AMF的库，网上的大部分都是只能解析简单数据，就仔细（并不）研究了一下。 解析AMF分为AMF0和AMF3，AMF3是AMF0的下一个版本，这里我们主要说一下AMF3的解析">
 
 
 
@@ -135,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/08/28/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/03/11/amf3/"/>
 
 
 
 
 
-  <title>Hello World | KaiserZ</title>
+  <title>amf3 | KaiserZ</title>
   
 
 
@@ -238,7 +238,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/28/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/11/amf3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="KaiserZ">
@@ -255,7 +255,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">amf3</h1>
         
 
         <div class="post-meta">
@@ -267,8 +267,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-28T17:29:43+08:00">
-                2017-08-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-11T09:25:32+08:00">
+                2019-03-11
               </time>
             
 
@@ -305,15 +305,24 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h1 id="AMF格式分析"><a href="#AMF格式分析" class="headerlink" title="AMF格式分析"></a>AMF格式分析</h1><h2 id="AMF"><a href="#AMF" class="headerlink" title="AMF"></a>AMF</h2><p>是Action Message Format的简写，Adobe推出的一个二进制数据格式。其优点在于数据压缩率高，可以发送复杂数据，比如自引用的数据等。由于最近需要在web上收发这个东西，并且js没有现成解析AMF的库，网上的大部分都是只能解析简单数据，就仔细（并不）研究了一下。</p>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><p>AMF分为AMF0和AMF3，AMF3是AMF0的下一个版本，这里我们主要说一下AMF3的解析</p>
+<p>文档</p>
+<blockquote>
+<p>AMF 0 ：<a href="http://wwwimages.adobe.com/content/dam/Adobe/en/devnet/amf/pdf/amf0-file-format-specification.pdf" target="_blank" rel="external">http://wwwimages.adobe.com/content/dam/Adobe/en/devnet/amf/pdf/amf0-file-format-specification.pdf</a></p>
+<p>AMF 3 ：<a href="http://download.macromedia.com/pub/labs/amf/amf3_spec_121207.pdf" target="_blank" rel="external">http://download.macromedia.com/pub/labs/amf/amf3_spec_121207.pdf</a></p>
+</blockquote>
+<p>首先明确一个uint29的概念，AMF3采用一种特殊的格式来表示整数。对于一个正常的整数，一般用4个字节储存，但是AMF为了便于压缩，整数的储存是变长的。AMF最少用1个字节来表示一个整数，最多用4个字节。对于4个字节的整数，前3个字节的最高位都是用来标识下一个字节是不是该整数的一部分。这意味着32个字节中有3个字节是标识位，只用剩下的29位来表示整数，因此最大的无符号整数值为2^29-1。</p>
+<p>我们直接来看数据</p>
+<ul>
+<li>00 03 表示版本号为3</li>
+<li>00 00 表示报文头部个数为0。如果不为0，后面紧跟具体的头部内容。每个头部内容的格式为<blockquote>
+<p>小节名称 <strong>+</strong> 16位BE编码长度 <strong>+</strong> UTF-8编码字符串内容 <strong>+</strong> 8位布尔值(must-understand 标记) <strong>+</strong> 32位BE编码小节长度 <strong>+</strong> AMF0值</p>
+</blockquote>
+</li>
+<li>00 01 报文体个数，0001表示有一个报文体</li>
+</ul>
+<p>接下来就报文的正文,正文 = targetURI + responseURI + 内容</p>
 
       
     </div>
@@ -338,14 +347,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/11/03/First-Post/" rel="next" title="First Post">
+                <i class="fa fa-chevron-left"></i> First Post
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/11/03/First-Post/" rel="prev" title="First Post">
-                First Post <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/11/learnFEAgain/" rel="prev" title="learnFEAgain">
+                learnFEAgain <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -464,7 +477,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AMF格式分析"><span class="nav-number">1.</span> <span class="nav-text">AMF格式分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AMF"><span class="nav-number">1.1.</span> <span class="nav-text">AMF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解析"><span class="nav-number">1.2.</span> <span class="nav-text">解析</span></a></li></ol></li></ol></div>
             
 
           </div>
