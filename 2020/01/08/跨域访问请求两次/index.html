@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="http," />
 
 
 
@@ -95,17 +95,18 @@
 
 
 
-<meta name="description" content="重学前端-1写在最初这个系列的文章算是学习winter老师的《重学前端》课程的一个笔记，以及记录自己学习过程中的一些心得和体会。 前端工程师的成长有两个视角  一是立足标准，系统性总结和整理前端知识，建立自己的认知和方法论。 二是放眼团队，从业务和功能的角度思考前端的价值和发展需要。  不可缺少的能力程序员通用的编程能力和架构能力 如何进步 系统地学习和总结获取知识 通过练习获取编程能力 通过工作">
+<meta name="description" content="跨域请求所有跨域提交某些请求的时候，如果服务端设置了可跨域访问，都会默认发送两次请求  第一次是预检请求，来查询是否支持跨域 第二次才是真正的请求  那有没有办法只让js发送一次请求呢？其实js中出现这个现象原因在于你发送了一个非简单的请求，所谓非简单请求：  只使用GET HEAD 或者POST请求方法， http头的信息不超出一下几种字段  Accept (发送方希望收到的数据类型) Acce">
+<meta name="keywords" content="http">
 <meta property="og:type" content="article">
-<meta property="og:title" content="learnFEAgain">
-<meta property="og:url" content="http://yoursite.com/2019/03/11/learnFEAgain/index.html">
+<meta property="og:title" content="跨域请求">
+<meta property="og:url" content="http://yoursite.com/2020/01/08/跨域访问请求两次/index.html">
 <meta property="og:site_name" content="KaiserZ">
-<meta property="og:description" content="重学前端-1写在最初这个系列的文章算是学习winter老师的《重学前端》课程的一个笔记，以及记录自己学习过程中的一些心得和体会。 前端工程师的成长有两个视角  一是立足标准，系统性总结和整理前端知识，建立自己的认知和方法论。 二是放眼团队，从业务和功能的角度思考前端的价值和发展需要。  不可缺少的能力程序员通用的编程能力和架构能力 如何进步 系统地学习和总结获取知识 通过练习获取编程能力 通过工作">
+<meta property="og:description" content="跨域请求所有跨域提交某些请求的时候，如果服务端设置了可跨域访问，都会默认发送两次请求  第一次是预检请求，来查询是否支持跨域 第二次才是真正的请求  那有没有办法只让js发送一次请求呢？其实js中出现这个现象原因在于你发送了一个非简单的请求，所谓非简单请求：  只使用GET HEAD 或者POST请求方法， http头的信息不超出一下几种字段  Accept (发送方希望收到的数据类型) Acce">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-11T01:26:47.181Z">
+<meta property="og:updated_time" content="2020-01-08T09:40:22.332Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="learnFEAgain">
-<meta name="twitter:description" content="重学前端-1写在最初这个系列的文章算是学习winter老师的《重学前端》课程的一个笔记，以及记录自己学习过程中的一些心得和体会。 前端工程师的成长有两个视角  一是立足标准，系统性总结和整理前端知识，建立自己的认知和方法论。 二是放眼团队，从业务和功能的角度思考前端的价值和发展需要。  不可缺少的能力程序员通用的编程能力和架构能力 如何进步 系统地学习和总结获取知识 通过练习获取编程能力 通过工作">
+<meta name="twitter:title" content="跨域请求">
+<meta name="twitter:description" content="跨域请求所有跨域提交某些请求的时候，如果服务端设置了可跨域访问，都会默认发送两次请求  第一次是预检请求，来查询是否支持跨域 第二次才是真正的请求  那有没有办法只让js发送一次请求呢？其实js中出现这个现象原因在于你发送了一个非简单的请求，所谓非简单请求：  只使用GET HEAD 或者POST请求方法， http头的信息不超出一下几种字段  Accept (发送方希望收到的数据类型) Acce">
 
 
 
@@ -135,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/11/learnFEAgain/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/01/08/跨域访问请求两次/"/>
 
 
 
 
 
-  <title>learnFEAgain | KaiserZ</title>
+  <title>跨域请求 | KaiserZ</title>
   
 
 
@@ -248,7 +249,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/11/learnFEAgain/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/08/跨域访问请求两次/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="KaiserZ">
@@ -265,7 +266,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">learnFEAgain</h1>
+          <h1 class="post-title" itemprop="name headline">跨域请求</h1>
         
 
         <div class="post-meta">
@@ -277,8 +278,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-11T09:30:11+08:00">
-                2019-03-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-08T14:38:35+08:00">
+                2020-01-08
               </time>
             
 
@@ -315,42 +316,30 @@
       
 
       
-        <h1 id="重学前端-1"><a href="#重学前端-1" class="headerlink" title="重学前端-1"></a>重学前端-1</h1><h2 id="写在最初"><a href="#写在最初" class="headerlink" title="写在最初"></a>写在最初</h2><p>这个系列的文章算是学习winter老师的《重学前端》课程的一个笔记，以及记录自己学习过程中的一些心得和体会。</p>
-<h2 id="前端工程师的成长"><a href="#前端工程师的成长" class="headerlink" title="前端工程师的成长"></a>前端工程师的成长</h2><p>有两个视角</p>
+        <h1 id="跨域请求"><a href="#跨域请求" class="headerlink" title="跨域请求"></a>跨域请求</h1><p>所有跨域提交某些请求的时候，如果服务端设置了可跨域访问，都会默认发送两次请求</p>
 <ul>
-<li>一是立足标准，系统性总结和整理前端知识，建立自己的认知和方法论。</li>
-<li>二是放眼团队，从业务和功能的角度思考前端的价值和发展需要。</li>
+<li>第一次是预检请求，来查询是否支持跨域</li>
+<li>第二次才是真正的请求</li>
 </ul>
-<h2 id="不可缺少的能力"><a href="#不可缺少的能力" class="headerlink" title="不可缺少的能力"></a>不可缺少的能力</h2><p>程序员通用的编程能力和架构能力</p>
-<h2 id="如何进步"><a href="#如何进步" class="headerlink" title="如何进步"></a>如何进步</h2><ul>
-<li>系统地学习和总结获取知识</li>
-<li>通过练习获取编程能力</li>
-<li>通过工作经验来获取架构和工程能力</li>
-</ul>
-<p>建立自己的只是体系和方法论</p>
-<h2 id="前端学习路线和方法"><a href="#前端学习路线和方法" class="headerlink" title="前端学习路线和方法"></a>前端学习路线和方法</h2><ol>
-<li><p>建立知识架构  </p>
-<p> js知识架构目录</p>
-<p> 用规定的文法，去表达特定的语义，最终操作运行时</p>
-</li>
-</ol>
+<p>那有没有办法只让js发送一次请求呢？其实js中出现这个现象原因在于你发送了一个非简单的请求，所谓非简单请求：</p>
+<blockquote>
+<p>只使用GET HEAD 或者POST请求方法，</p>
+<p>http头的信息不超出一下几种字段</p>
 <ul>
-<li>文法<ul>
-<li>词法</li>
-<li>语法</li>
+<li>Accept (发送方希望收到的数据类型)</li>
+<li>Accept-Language</li>
+<li>Content-Language</li>
+<li>Last-Event-ID</li>
+<li>Content-Type</li>
 </ul>
-</li>
-<li>语义</li>
-<li>运行时<ul>
-<li>类型</li>
-<li>执行过程</li>
+<p>如果使用POST向服务器传送数据，则数据类型(Content-Type)只能是</p>
+<ul>
+<li>application/x-www-form-urlencoded</li>
+<li>multipart/form-data</li>
+<li>text/plain</li>
 </ul>
-</li>
-</ul>
-<p>我们都知道：程序 = 算法 + 数据结构，那么，对运行时来说类型就是数据结构，执行过程就是算法</p>
-<ol>
-<li>追本溯源</li>
-</ol>
+</blockquote>
+<p>对于简单请求，浏览器直接发出CORS请求，就是在通用头部增加一个Origin字段。<br>非简单请求的CORS请求，会在正式通信之前，增加一次HTTP查询请求，称为”预检”请求(preflight)。</p>
 
       
     </div>
@@ -366,6 +355,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/http/" rel="tag"># http</a>
+          
+        </div>
+      
 
       
       
@@ -375,8 +370,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/11/amf3/" rel="next" title="amf3">
-                <i class="fa fa-chevron-left"></i> amf3
+              <a href="/2019/03/11/learnFEAgain/" rel="next" title="learnFEAgain">
+                <i class="fa fa-chevron-left"></i> learnFEAgain
               </a>
             
           </div>
@@ -385,8 +380,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/01/08/跨域访问请求两次/" rel="prev" title="跨域请求">
-                跨域请求 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/01/08/CSS扩大可点击区域的两种办法/" rel="prev" title="CSS扩大可点击区域">
+                CSS扩大可点击区域 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -514,7 +509,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#重学前端-1"><span class="nav-number">1.</span> <span class="nav-text">重学前端-1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在最初"><span class="nav-number">1.1.</span> <span class="nav-text">写在最初</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前端工程师的成长"><span class="nav-number">1.2.</span> <span class="nav-text">前端工程师的成长</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不可缺少的能力"><span class="nav-number">1.3.</span> <span class="nav-text">不可缺少的能力</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何进步"><span class="nav-number">1.4.</span> <span class="nav-text">如何进步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前端学习路线和方法"><span class="nav-number">1.5.</span> <span class="nav-text">前端学习路线和方法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#跨域请求"><span class="nav-number">1.</span> <span class="nav-text">跨域请求</span></a></li></ol></div>
             
 
           </div>
