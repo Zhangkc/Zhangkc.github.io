@@ -329,9 +329,69 @@
 <blockquote>
 <p>当然也可以使用<code>--inspect</code>参数启动nodejs应用，再通过chrome的开发者工具查看火焰图。</p>
 </blockquote>
-<h2 id="看懂火焰图"><a href="#看懂火焰图" class="headerlink" title="看懂火焰图"></a>看懂火焰图</h2><p>刚刚我们生成了nodejs的火焰图，可以发现其中有几种不同的颜色，含义如下：<br>| 颜色 | 类型 |<br>| — | — |<br>| 绿色 | 应用js代码 |<br>| 蓝色 | nodejs库代码 |<br>| 黄色 | 引擎C++/C代码 |<br>| 红色 | 系统调用 |</p>
+<h2 id="看懂火焰图"><a href="#看懂火焰图" class="headerlink" title="看懂火焰图"></a>看懂火焰图</h2><p>刚刚我们生成了nodejs的火焰图，可以发现其中有几种不同的颜色，含义如下：</p>
+<table>
+<thead>
+<tr>
+<th>颜色</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>绿色</td>
+<td>应用js代码</td>
+</tr>
+<tr>
+<td>蓝色</td>
+<td>nodejs库代码</td>
+</tr>
+<tr>
+<td>黄色</td>
+<td>引擎C++/C代码</td>
+</tr>
+<tr>
+<td>红色</td>
+<td>系统调用</td>
+</tr>
+</tbody>
+</table>
 <p>Y轴表示栈的深度，X轴表示总样例，左右顺序按照首字母排列，无特殊意义</p>
-<p>常见帧栈prefix的说明：<br>|帧栈prefix|含义|<br>|—|—|<br>|LazyCompile| V8引擎开发者原话: LazyCompile prefix does not mean that this time was spent in compiler, it just means that the function itself was compiled lazily. 表示该函数是延迟编译的|<br>|Builtin|内置的方法|<br>|Stub|C入口桩代码：作用是在js的JIT代码中，如果要调用Runtime的函数，则通过CEntryStub实现|<br>|V8::internal V8::Function|V8引擎内部C++的命名空间和函数调用|<br>|*(asterisk)|表示该函数被V8引擎优化过|<br>|~(tilda)|表示该函数未被V8引擎优化|</p>
+<p>常见帧栈prefix的说明：</p>
+<table>
+<thead>
+<tr>
+<th>帧栈prefix</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LazyCompile</td>
+<td>V8引擎开发者原话: LazyCompile prefix does not mean that this time was spent in compiler, it just means that the function itself was compiled lazily. 表示该函数是延迟编译的</td>
+</tr>
+<tr>
+<td>Builtin</td>
+<td>内置的方法</td>
+</tr>
+<tr>
+<td>Stub</td>
+<td>C入口桩代码：作用是在js的JIT代码中，如果要调用Runtime的函数，则通过CEntryStub实现</td>
+</tr>
+<tr>
+<td>V8::internal V8::Function</td>
+<td>V8引擎内部C++的命名空间和函数调用</td>
+</tr>
+<tr>
+<td>*(asterisk)</td>
+<td>表示该函数被V8引擎优化过</td>
+</tr>
+<tr>
+<td>~(tilda)</td>
+<td>表示该函数未被V8引擎优化</td>
+</tr>
+</tbody>
+</table>
 <h2 id="dot图"><a href="#dot图" class="headerlink" title="dot图"></a>dot图</h2><p>dot图也经常被用来进行cpu性能分析。</p>
 <p>具体请查看<a href="https://github.com/jrfonseca/gprof2dot.git" target="_blank" rel="noopener">gprof2dot脚本</a></p>
 <p>基于perf.data文件转换成dot文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">perf script -i perf.data.pid | python gprof2dot.py –f perf –e 1 –o xxx.dot</span><br><span class="line"></span><br><span class="line">dot –Tsvg xxx.dot –o xxx.svg</span><br></pre></td></tr></table></figure></p>
