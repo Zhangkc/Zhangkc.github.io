@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="KaiserZ">
 <meta property="og:description" content="使用perf对nodejs应用进行性能测试准备工作  设置最大文件句柄  linux下tcp参数设置  保证压力源和被测服务器在同一个网段（防止nat转换端口用尽）  服务器监控程序，如果没有可以自行安装netdata等  保证压力源和被测服务器之间带宽符合要求  常用指令123456789101112131415161718192021# 统计tcp连接状态netstat -tan |grep">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-08-19T03:13:39.142Z">
+<meta property="og:updated_time" content="2020-08-19T03:18:23.374Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用perf对nodejs应用进行性能测试">
 <meta name="twitter:description" content="使用perf对nodejs应用进行性能测试准备工作  设置最大文件句柄  linux下tcp参数设置  保证压力源和被测服务器在同一个网段（防止nat转换端口用尽）  服务器监控程序，如果没有可以自行安装netdata等  保证压力源和被测服务器之间带宽符合要求  常用指令123456789101112131415161718192021# 统计tcp连接状态netstat -tan |grep">
@@ -329,7 +329,6 @@
 <p>当然也可以使用<code>--inspect</code>参数启动nodejs应用，再通过chrome的开发者工具查看火焰图。</p>
 </blockquote>
 <h2 id="看懂火焰图"><a href="#看懂火焰图" class="headerlink" title="看懂火焰图"></a>看懂火焰图</h2><p>刚刚我们生成了nodejs的火焰图，可以发现其中有几种不同的颜色，含义如下：</p>
-<hr>
 <table>
 <thead>
 <tr>
@@ -358,7 +357,6 @@
 </table>
 <p>Y轴表示栈的深度，X轴表示总样例，左右顺序按照首字母排列，无特殊意义</p>
 <p>常见帧栈prefix的说明：</p>
-<hr>
 <table>
 <thead>
 <tr>
