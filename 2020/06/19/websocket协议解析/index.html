@@ -6,10 +6,10 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +20,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -40,7 +40,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -74,21 +74,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
 
 
 
@@ -135,7 +135,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/06/19/websocket协议解析/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/06/19/websocket协议解析/">
 
 
 
@@ -169,7 +169,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">KaiserZ</span>
         <span class="logo-line-after"><i></i></span>
@@ -199,7 +199,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -209,7 +209,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -252,7 +252,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="KaiserZ">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -315,9 +315,9 @@
       
 
       
-        <h1 id="websocket协议解析"><a href="#websocket协议解析" class="headerlink" title="websocket协议解析"></a>websocket协议解析</h1><h2 id="握手"><a href="#握手" class="headerlink" title="握手"></a>握手</h2><p>websocket使用http进行握手<br>客户端请求的部分长这样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">GET /chat HTTP/1.1</div><div class="line">Host: server.example.com</div><div class="line">Upgrade: websocket</div><div class="line">Connection: Upgrade</div><div class="line">Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==</div><div class="line">Origin: http://example.com</div><div class="line">Sec-WebSocket-Protocol: chat, superchat</div><div class="line">Sec-WebSocket-Version: 13</div></pre></td></tr></table></figure></p>
-<p>服务端回应的部分长这样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">HTTP/1.1 101 Switching Protocols</div><div class="line">Upgrade: websocket</div><div class="line">Connection: Upgrade</div><div class="line">Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=</div><div class="line">Sec-WebSocket-Protocol: chat</div></pre></td></tr></table></figure></p>
-<p>其中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Upgrade: websocket</div><div class="line">Connection: Upgrade</div></pre></td></tr></table></figure></p>
+        <h1 id="websocket协议解析"><a href="#websocket协议解析" class="headerlink" title="websocket协议解析"></a>websocket协议解析</h1><h2 id="握手"><a href="#握手" class="headerlink" title="握手"></a>握手</h2><p>websocket使用http进行握手<br>客户端请求的部分长这样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">GET /chat HTTP/1.1</span><br><span class="line">Host: server.example.com</span><br><span class="line">Upgrade: websocket</span><br><span class="line">Connection: Upgrade</span><br><span class="line">Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==</span><br><span class="line">Origin: http://example.com</span><br><span class="line">Sec-WebSocket-Protocol: chat, superchat</span><br><span class="line">Sec-WebSocket-Version: 13</span><br></pre></td></tr></table></figure></p>
+<p>服务端回应的部分长这样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 101 Switching Protocols</span><br><span class="line">Upgrade: websocket</span><br><span class="line">Connection: Upgrade</span><br><span class="line">Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=</span><br><span class="line">Sec-WebSocket-Protocol: chat</span><br></pre></td></tr></table></figure></p>
+<p>其中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Upgrade: websocket</span><br><span class="line">Connection: Upgrade</span><br></pre></td></tr></table></figure></p>
 <p>是必须的固定字段</p>
 <p><code>Origin</code>在文档里规定是必须的，但是很多实现里都不是必须的</p>
 <p><code>Sec-WebSocket-Key</code>是一个16字节的随机值，并经过base64编码</p>
@@ -326,12 +326,12 @@
 <p><code>Sec-WebSocket-Accept</code>必须，服务端根据客户端发送的<code>Sec-WebSocket-Key</code>和<code>258EAFA5-
 E914-47DA-95CA-C5AB0DC85B11</code>进行拼接，并经过<code>sha-1</code>加密后再用base64编码，返回给客户端验证。</p>
 <p>客户端验证成功后握手就完成了。</p>
-<h2 id="数据帧"><a href="#数据帧" class="headerlink" title="数据帧"></a>数据帧</h2><p>草案里定义的帧结构图<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">0                   1                   2                   3</div><div class="line">0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1</div><div class="line">+-+-+-+-+-------+-+-------------+-------------------------------+</div><div class="line">|F|R|R|R| opcode|M| Payload len |    Extended payload length    |</div><div class="line">|I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |</div><div class="line">|N|V|V|V|       |S|             |   (if payload len==126/127)   |</div><div class="line">| |1|2|3|       |K|             |                               |</div><div class="line">+-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +</div><div class="line">|     Extended payload length continued, if payload len == 127  |</div><div class="line">+ - - - - - - - - - - - - - - - +-------------------------------+</div><div class="line">|                               |Masking-key, if MASK set to 1  |</div><div class="line">+-------------------------------+-------------------------------+</div><div class="line">| Masking-key (continued)       |          Payload Data         |</div><div class="line">+-------------------------------- - - - - - - - - - - - - - - - +</div><div class="line">:                     Payload Data continued ...                :</div><div class="line">+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +</div><div class="line">|                     Payload Data continued ...                |</div><div class="line">+---------------------------------------------------------------+</div></pre></td></tr></table></figure></p>
+<h2 id="数据帧"><a href="#数据帧" class="headerlink" title="数据帧"></a>数据帧</h2><p>草案里定义的帧结构图<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">0                   1                   2                   3</span><br><span class="line">0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1</span><br><span class="line">+-+-+-+-+-------+-+-------------+-------------------------------+</span><br><span class="line">|F|R|R|R| opcode|M| Payload len |    Extended payload length    |</span><br><span class="line">|I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |</span><br><span class="line">|N|V|V|V|       |S|             |   (if payload len==126/127)   |</span><br><span class="line">| |1|2|3|       |K|             |                               |</span><br><span class="line">+-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +</span><br><span class="line">|     Extended payload length continued, if payload len == 127  |</span><br><span class="line">+ - - - - - - - - - - - - - - - +-------------------------------+</span><br><span class="line">|                               |Masking-key, if MASK set to 1  |</span><br><span class="line">+-------------------------------+-------------------------------+</span><br><span class="line">| Masking-key (continued)       |          Payload Data         |</span><br><span class="line">+-------------------------------- - - - - - - - - - - - - - - - +</span><br><span class="line">:                     Payload Data continued ...                :</span><br><span class="line">+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +</span><br><span class="line">|                     Payload Data continued ...                |</span><br><span class="line">+---------------------------------------------------------------+</span><br></pre></td></tr></table></figure></p>
 <h3 id="Fin-1bit"><a href="#Fin-1bit" class="headerlink" title="Fin: 1bit"></a>Fin: 1bit</h3><p>表示该帧是否为整个消息的最后一帧。</p>
 <h3 id="RSV1-RSV2-RSV3-1bit-each"><a href="#RSV1-RSV2-RSV3-1bit-each" class="headerlink" title="RSV1, RSV2, RSV3: 1bit each"></a>RSV1, RSV2, RSV3: 1bit each</h3><p>保留位，一般都是0，可以用于websocket扩展协议的定义。</p>
 <h3 id="Opcode-4bits"><a href="#Opcode-4bits" class="headerlink" title="Opcode: 4bits"></a>Opcode: 4bits</h3><p>表示数据包的类型<br>|值|定义|<br>|:-|:-|<br>|%x0|表示是上一个帧的延续|<br>|%x1|表示是一个字符帧|<br>|%x2|表示是一个字节帧|<br>|%x3-7|保留值，供未来的非控制帧使用|<br>|%x8|表示关闭连接|<br>|%x9|表示心跳请求ping|<br>|%xA|表示心跳响应pong|<br>|%xB-F|保留值，供未来的控制帧使用|</p>
 <h3 id="Mask-1bit"><a href="#Mask-1bit" class="headerlink" title="Mask: 1bit"></a>Mask: 1bit</h3><p>表示数据包是否经过掩码转换。为了中间缓存攻击，从客户端发往服务端的数据必须通过一个mask key进行异或运算</p>
-<p>假设<code>payload</code>长度为<code>pLen</code>，<code>mask key</code>长度为<code>mLen</code>，转换方法如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i &lt; plen;i++&gt;)&#123;</div><div class="line">  <span class="keyword">let</span> j = i % mLen</div><div class="line">  maskedPayload[i] = payload[i] ^ maskKey[j]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>假设<code>payload</code>长度为<code>pLen</code>，<code>mask key</code>长度为<code>mLen</code>，转换方法如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i &lt; plen;i++&gt;)&#123;</span><br><span class="line">  <span class="keyword">let</span> j = i % mLen</span><br><span class="line">  maskedPayload[i] = payload[i] ^ maskKey[j]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="Payload-7-bits-7-16-bits-or-7-64-bits"><a href="#Payload-7-bits-7-16-bits-or-7-64-bits" class="headerlink" title="Payload:  7 bits, 7+16 bits, or 7+64 bits"></a>Payload:  7 bits, 7+16 bits, or 7+64 bits</h3><ol>
 <li>读取9-15位 (包括9和15位本身)，并转换为无符号整数。如果值小于或等于125，这个值就是长度；如果是 126，请转到步骤 2。如果它是 127，请转到步骤 3。</li>
 <li>读取接下来的 16 位并转换为无符号整数，并作为长度。</li>
@@ -429,7 +429,7 @@ E914-47DA-95CA-C5AB0DC85B11</code>进行拼接，并经过<code>sha-1</code>加�
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -440,9 +440,7 @@ E914-47DA-95CA-C5AB0DC85B11</code>进行拼接，并经过<code>sha-1</code>加�
 
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
-               alt="KaiserZ" />
+          <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="KaiserZ">
           <p class="site-author-name" itemprop="name">KaiserZ</p>
            
               <p class="site-description motion-element" itemprop="description"></p>
@@ -523,7 +521,7 @@ E914-47DA-95CA-C5AB0DC85B11</code>进行拼接，并经过<code>sha-1</code>加�
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <div class="copyright">
   
   &copy; 
   <span itemprop="copyrightYear">2020</span>

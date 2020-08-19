@@ -6,10 +6,10 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +20,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -40,7 +40,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -74,21 +74,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
 
 
 
@@ -135,7 +135,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/07/08/nodejs/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/07/08/nodejs/">
 
 
 
@@ -169,7 +169,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">KaiserZ</span>
         <span class="logo-line-after"><i></i></span>
@@ -199,7 +199,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -209,7 +209,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -252,7 +252,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="KaiserZ">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -322,9 +322,9 @@
 <li style="list-style: none"><input type="checkbox" checked> 服务器监控程序，如果没有可以自行安装netdata等</li>
 <li style="list-style: none"><input type="checkbox" checked> 保证压力源和被测服务器之间带宽符合要求</li>
 </ul>
-<h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 统计tcp连接状态</span></div><div class="line">netstat -tan |grep ^tcp |awk <span class="string">'&#123;++a[$6]&#125; END&#123;for (i in a) print i, a[i]&#125;'</span></div><div class="line"></div><div class="line"><span class="comment"># 带宽测试</span></div><div class="line">iperf -s</div><div class="line">iperf -c 10.22.2.2</div><div class="line"></div><div class="line"><span class="comment"># perf</span></div><div class="line">perf record -F 99 -p xxxx -g -- sleep 60</div><div class="line">perf script | ./stackcollapse-perf.pl | ./flamegraph.pl --color=js &gt; xxx.svg</div><div class="line"></div><div class="line"><span class="comment"># recv-q send-q</span></div><div class="line">ss -ln</div><div class="line"></div><div class="line"><span class="comment"># tcp status</span></div><div class="line">ss -s</div><div class="line"></div><div class="line"><span class="comment"># others</span></div><div class="line">top -c</div><div class="line">dmesg</div><div class="line">free -m</div></pre></td></tr></table></figure>
+<h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 统计tcp连接状态</span></span><br><span class="line">netstat -tan |grep ^tcp |awk <span class="string">'&#123;++a[$6]&#125; END&#123;for (i in a) print i, a[i]&#125;'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 带宽测试</span></span><br><span class="line">iperf -s</span><br><span class="line">iperf -c 10.22.2.2</span><br><span class="line"></span><br><span class="line"><span class="comment"># perf</span></span><br><span class="line">perf record -F 99 -p xxxx -g -- sleep 60</span><br><span class="line">perf script | ./stackcollapse-perf.pl | ./flamegraph.pl --color=js &gt; xxx.svg</span><br><span class="line"></span><br><span class="line"><span class="comment"># recv-q send-q</span></span><br><span class="line">ss -ln</span><br><span class="line"></span><br><span class="line"><span class="comment"># tcp status</span></span><br><span class="line">ss -s</span><br><span class="line"></span><br><span class="line"><span class="comment"># others</span></span><br><span class="line">top -c</span><br><span class="line">dmesg</span><br><span class="line">free -m</span><br></pre></td></tr></table></figure>
 <h2 id="采集nodejs应用的火焰图"><a href="#采集nodejs应用的火焰图" class="headerlink" title="采集nodejs应用的火焰图"></a>采集nodejs应用的火焰图</h2><p>启动nodejs应用时增加参数<code>--interpreted-frames-native-stack</code>(Node.js 10+)，<code>--perf-basic-prof-only-functions</code> 或 <code>--perf-basic-prof</code><br>如果没有这些参数的话，你照样可以得到火焰图。不过大部分的横条里的函数调用都将被标记为 <code>v8::Function::Call</code></p>
-<p>之后使用perf命令采样即可，获取数据后借用<a href="http://github.com/brendangregg/FlameGraph" target="_blank" rel="external">FlameGraph开源库</a>里面的stackcollapse-perf.pl和flamegraph.pl生成火焰图</p>
+<p>之后使用perf命令采样即可，获取数据后借用<a href="http://github.com/brendangregg/FlameGraph" target="_blank" rel="noopener">FlameGraph开源库</a>里面的stackcollapse-perf.pl和flamegraph.pl生成火焰图</p>
 <blockquote>
 <p>当然也可以使用<code>--inspect</code>参数启动nodejs应用，再通过chrome的开发者工具查看火焰图。</p>
 </blockquote>
@@ -332,8 +332,8 @@
 <p>Y轴表示栈的深度，X轴表示总样例，左右顺序按照首字母排列，无特殊意义</p>
 <p>常见帧栈prefix的说明：<br>|帧栈prefix|含义|<br>|—|—|<br>|LazyCompile| V8引擎开发者原话: LazyCompile prefix does not mean that this time was spent in compiler, it just means that the function itself was compiled lazily. 表示该函数是延迟编译的|<br>|Builtin|内置的方法|<br>|Stub|C入口桩代码：作用是在js的JIT代码中，如果要调用Runtime的函数，则通过CEntryStub实现|<br>|V8::internal V8::Function|V8引擎内部C++的命名空间和函数调用|<br>|*(asterisk)|表示该函数被V8引擎优化过|<br>|~(tilda)|表示该函数未被V8引擎优化|</p>
 <h2 id="dot图"><a href="#dot图" class="headerlink" title="dot图"></a>dot图</h2><p>dot图也经常被用来进行cpu性能分析。</p>
-<p>具体请查看<a href="https://github.com/jrfonseca/gprof2dot.git" target="_blank" rel="external">gprof2dot脚本</a></p>
-<p>基于perf.data文件转换成dot文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">perf script -i perf.data.pid | python gprof2dot.py –f perf –e 1 –o xxx.dot</div><div class="line"></div><div class="line">dot –Tsvg xxx.dot –o xxx.svg</div></pre></td></tr></table></figure></p>
+<p>具体请查看<a href="https://github.com/jrfonseca/gprof2dot.git" target="_blank" rel="noopener">gprof2dot脚本</a></p>
+<p>基于perf.data文件转换成dot文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">perf script -i perf.data.pid | python gprof2dot.py –f perf –e 1 –o xxx.dot</span><br><span class="line"></span><br><span class="line">dot –Tsvg xxx.dot –o xxx.svg</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -419,7 +419,7 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -430,9 +430,7 @@
 
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
-               alt="KaiserZ" />
+          <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="KaiserZ">
           <p class="site-author-name" itemprop="name">KaiserZ</p>
            
               <p class="site-description motion-element" itemprop="description"></p>
@@ -513,7 +511,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <div class="copyright">
   
   &copy; 
   <span itemprop="copyrightYear">2020</span>

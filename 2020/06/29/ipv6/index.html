@@ -6,10 +6,10 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +20,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -40,7 +40,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -74,21 +74,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
 
 
 
@@ -135,7 +135,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/06/29/ipv6/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/06/29/ipv6/">
 
 
 
@@ -169,7 +169,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">KaiserZ</span>
         <span class="logo-line-after"><i></i></span>
@@ -199,7 +199,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -209,7 +209,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -252,7 +252,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="KaiserZ">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -316,11 +316,11 @@
 
       
         <h2 id="IPv6相关"><a href="#IPv6相关" class="headerlink" title="IPv6相关"></a>IPv6相关</h2><p>由于项目涉及到ipv6的改造，发现ipv6在测试、使用等方面都和ipv4有较大区别。</p>
-<h3 id="ping"><a href="#ping" class="headerlink" title="ping"></a>ping</h3><h4 id="windows-平台"><a href="#windows-平台" class="headerlink" title="windows 平台"></a>windows 平台</h4><p>命令<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ping (-<span class="number">6</span>) ipv6addr%scopeId</div></pre></td></tr></table></figure></p>
+<h3 id="ping"><a href="#ping" class="headerlink" title="ping"></a>ping</h3><h4 id="windows-平台"><a href="#windows-平台" class="headerlink" title="windows 平台"></a>windows 平台</h4><p>命令<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping (-<span class="number">6</span>) ipv6addr%scopeId</span><br></pre></td></tr></table></figure></p>
 <p>scope id就是使用ipconfig查看IPv6地址的时候%后的数字</p>
-<h4 id="Linux-平台"><a href="#Linux-平台" class="headerlink" title="Linux 平台"></a>Linux 平台</h4><p>命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ping6 -I interface ipv6addr</div><div class="line">ping6 IPv6addr%interface</div></pre></td></tr></table></figure></p>
-<h3 id="telnet"><a href="#telnet" class="headerlink" title="telnet"></a>telnet</h3><h4 id="windows-平台-1"><a href="#windows-平台-1" class="headerlink" title="windows 平台"></a>windows 平台</h4><p>命令<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">telnet ipv6addr%scopeId port</div></pre></td></tr></table></figure></p>
-<h4 id="Linux-平台-1"><a href="#Linux-平台-1" class="headerlink" title="Linux 平台"></a>Linux 平台</h4><p>命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">telnet IPv6addr%interface port</div></pre></td></tr></table></figure></p>
+<h4 id="Linux-平台"><a href="#Linux-平台" class="headerlink" title="Linux 平台"></a>Linux 平台</h4><p>命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ping6 -I interface ipv6addr</span><br><span class="line">ping6 IPv6addr%interface</span><br></pre></td></tr></table></figure></p>
+<h3 id="telnet"><a href="#telnet" class="headerlink" title="telnet"></a>telnet</h3><h4 id="windows-平台-1"><a href="#windows-平台-1" class="headerlink" title="windows 平台"></a>windows 平台</h4><p>命令<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">telnet ipv6addr%scopeId port</span><br></pre></td></tr></table></figure></p>
+<h4 id="Linux-平台-1"><a href="#Linux-平台-1" class="headerlink" title="Linux 平台"></a>Linux 平台</h4><p>命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">telnet IPv6addr%interface port</span><br></pre></td></tr></table></figure></p>
 <h3 id="特殊地址"><a href="#特殊地址" class="headerlink" title="特殊地址"></a>特殊地址</h3><h4 id="本地地址"><a href="#本地地址" class="headerlink" title="本地地址"></a>本地地址</h4><p>::1<br>::fe80</p>
 <h4 id="局域网地址"><a href="#局域网地址" class="headerlink" title="局域网地址"></a>局域网地址</h4><p>fc00::</p>
 
@@ -412,7 +412,7 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -423,9 +423,7 @@
 
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
-               alt="KaiserZ" />
+          <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="KaiserZ">
           <p class="site-author-name" itemprop="name">KaiserZ</p>
            
               <p class="site-description motion-element" itemprop="description"></p>
@@ -506,7 +504,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <div class="copyright">
   
   &copy; 
   <span itemprop="copyrightYear">2020</span>

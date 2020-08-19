@@ -6,10 +6,10 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +20,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -40,7 +40,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -74,21 +74,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
 
 
 
@@ -131,7 +131,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/">
 
 
 
@@ -166,7 +166,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">KaiserZ</span>
         <span class="logo-line-after"><i></i></span>
@@ -196,7 +196,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -206,7 +206,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -249,7 +249,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="KaiserZ">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -323,9 +323,9 @@
 <li style="list-style: none"><input type="checkbox" checked> 服务器监控程序，如果没有可以自行安装netdata等</li>
 <li style="list-style: none"><input type="checkbox" checked> 保证压力源和被测服务器之间带宽符合要求</li>
 </ul>
-<h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 统计tcp连接状态</span></div><div class="line">netstat -tan |grep ^tcp |awk <span class="string">'&#123;++a[$6]&#125; END&#123;for (i in a) print i, a[i]&#125;'</span></div><div class="line"></div><div class="line"><span class="comment"># 带宽测试</span></div><div class="line">iperf -s</div><div class="line">iperf -c 10.22.2.2</div><div class="line"></div><div class="line"><span class="comment"># perf</span></div><div class="line">perf record -F 99 -p xxxx -g -- sleep 60</div><div class="line">perf script | ./stackcollapse-perf.pl | ./flamegraph.pl --color=js &gt; xxx.svg</div><div class="line"></div><div class="line"><span class="comment"># recv-q send-q</span></div><div class="line">ss -ln</div><div class="line"></div><div class="line"><span class="comment"># tcp status</span></div><div class="line">ss -s</div><div class="line"></div><div class="line"><span class="comment"># others</span></div><div class="line">top -c</div><div class="line">dmesg</div><div class="line">free -m</div></pre></td></tr></table></figure>
+<h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 统计tcp连接状态</span></span><br><span class="line">netstat -tan |grep ^tcp |awk <span class="string">'&#123;++a[$6]&#125; END&#123;for (i in a) print i, a[i]&#125;'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 带宽测试</span></span><br><span class="line">iperf -s</span><br><span class="line">iperf -c 10.22.2.2</span><br><span class="line"></span><br><span class="line"><span class="comment"># perf</span></span><br><span class="line">perf record -F 99 -p xxxx -g -- sleep 60</span><br><span class="line">perf script | ./stackcollapse-perf.pl | ./flamegraph.pl --color=js &gt; xxx.svg</span><br><span class="line"></span><br><span class="line"><span class="comment"># recv-q send-q</span></span><br><span class="line">ss -ln</span><br><span class="line"></span><br><span class="line"><span class="comment"># tcp status</span></span><br><span class="line">ss -s</span><br><span class="line"></span><br><span class="line"><span class="comment"># others</span></span><br><span class="line">top -c</span><br><span class="line">dmesg</span><br><span class="line">free -m</span><br></pre></td></tr></table></figure>
 <h2 id="采集nodejs应用的火焰图"><a href="#采集nodejs应用的火焰图" class="headerlink" title="采集nodejs应用的火焰图"></a>采集nodejs应用的火焰图</h2><p>启动nodejs应用时增加参数<code>--interpreted-frames-native-stack</code>(Node.js 10+)，<code>--perf-basic-prof-only-functions</code> 或 <code>--perf-basic-prof</code><br>如果没有这些参数的话，你照样可以得到火焰图。不过大部分的横条里的函数调用都将被标记为 <code>v8::Function::Call</code></p>
-<p>之后使用perf命令采样即可，获取数据后借用<a href="http://github.com/brendangregg/FlameGraph" target="_blank" rel="external">FlameGraph开源库</a>里面的stackcollapse-perf.pl和flamegraph.pl生成火焰图</p>
+<p>之后使用perf命令采样即可，获取数据后借用<a href="http://github.com/brendangregg/FlameGraph" target="_blank" rel="noopener">FlameGraph开源库</a>里面的stackcollapse-perf.pl和flamegraph.pl生成火焰图</p>
 <blockquote>
 <p>当然也可以使用<code>--inspect</code>参数启动nodejs应用，再通过chrome的开发者工具查看火焰图。</p>
 </blockquote>
@@ -333,8 +333,8 @@
 <p>Y轴表示栈的深度，X轴表示总样例，左右顺序按照首字母排列，无特殊意义</p>
 <p>常见帧栈prefix的说明：<br>|帧栈prefix|含义|<br>|—|—|<br>|LazyCompile| V8引擎开发者原话: LazyCompile prefix does not mean that this time was spent in compiler, it just means that the function itself was compiled lazily. 表示该函数是延迟编译的|<br>|Builtin|内置的方法|<br>|Stub|C入口桩代码：作用是在js的JIT代码中，如果要调用Runtime的函数，则通过CEntryStub实现|<br>|V8::internal V8::Function|V8引擎内部C++的命名空间和函数调用|<br>|*(asterisk)|表示该函数被V8引擎优化过|<br>|~(tilda)|表示该函数未被V8引擎优化|</p>
 <h2 id="dot图"><a href="#dot图" class="headerlink" title="dot图"></a>dot图</h2><p>dot图也经常被用来进行cpu性能分析。</p>
-<p>具体请查看<a href="https://github.com/jrfonseca/gprof2dot.git" target="_blank" rel="external">gprof2dot脚本</a></p>
-<p>基于perf.data文件转换成dot文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">perf script -i perf.data.pid | python gprof2dot.py –f perf –e 1 –o xxx.dot</div><div class="line"></div><div class="line">dot –Tsvg xxx.dot –o xxx.svg</div></pre></td></tr></table></figure></p>
+<p>具体请查看<a href="https://github.com/jrfonseca/gprof2dot.git" target="_blank" rel="noopener">gprof2dot脚本</a></p>
+<p>基于perf.data文件转换成dot文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">perf script -i perf.data.pid | python gprof2dot.py –f perf –e 1 –o xxx.dot</span><br><span class="line"></span><br><span class="line">dot –Tsvg xxx.dot –o xxx.svg</span><br></pre></td></tr></table></figure></p>
 
           
         
@@ -387,7 +387,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="KaiserZ">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -455,11 +455,11 @@
         
           
             <h2 id="IPv6相关"><a href="#IPv6相关" class="headerlink" title="IPv6相关"></a>IPv6相关</h2><p>由于项目涉及到ipv6的改造，发现ipv6在测试、使用等方面都和ipv4有较大区别。</p>
-<h3 id="ping"><a href="#ping" class="headerlink" title="ping"></a>ping</h3><h4 id="windows-平台"><a href="#windows-平台" class="headerlink" title="windows 平台"></a>windows 平台</h4><p>命令<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ping (-<span class="number">6</span>) ipv6addr%scopeId</div></pre></td></tr></table></figure></p>
+<h3 id="ping"><a href="#ping" class="headerlink" title="ping"></a>ping</h3><h4 id="windows-平台"><a href="#windows-平台" class="headerlink" title="windows 平台"></a>windows 平台</h4><p>命令<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping (-<span class="number">6</span>) ipv6addr%scopeId</span><br></pre></td></tr></table></figure></p>
 <p>scope id就是使用ipconfig查看IPv6地址的时候%后的数字</p>
-<h4 id="Linux-平台"><a href="#Linux-平台" class="headerlink" title="Linux 平台"></a>Linux 平台</h4><p>命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ping6 -I interface ipv6addr</div><div class="line">ping6 IPv6addr%interface</div></pre></td></tr></table></figure></p>
-<h3 id="telnet"><a href="#telnet" class="headerlink" title="telnet"></a>telnet</h3><h4 id="windows-平台-1"><a href="#windows-平台-1" class="headerlink" title="windows 平台"></a>windows 平台</h4><p>命令<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">telnet ipv6addr%scopeId port</div></pre></td></tr></table></figure></p>
-<h4 id="Linux-平台-1"><a href="#Linux-平台-1" class="headerlink" title="Linux 平台"></a>Linux 平台</h4><p>命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">telnet IPv6addr%interface port</div></pre></td></tr></table></figure></p>
+<h4 id="Linux-平台"><a href="#Linux-平台" class="headerlink" title="Linux 平台"></a>Linux 平台</h4><p>命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ping6 -I interface ipv6addr</span><br><span class="line">ping6 IPv6addr%interface</span><br></pre></td></tr></table></figure></p>
+<h3 id="telnet"><a href="#telnet" class="headerlink" title="telnet"></a>telnet</h3><h4 id="windows-平台-1"><a href="#windows-平台-1" class="headerlink" title="windows 平台"></a>windows 平台</h4><p>命令<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">telnet ipv6addr%scopeId port</span><br></pre></td></tr></table></figure></p>
+<h4 id="Linux-平台-1"><a href="#Linux-平台-1" class="headerlink" title="Linux 平台"></a>Linux 平台</h4><p>命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">telnet IPv6addr%interface port</span><br></pre></td></tr></table></figure></p>
 <h3 id="特殊地址"><a href="#特殊地址" class="headerlink" title="特殊地址"></a>特殊地址</h3><h4 id="本地地址"><a href="#本地地址" class="headerlink" title="本地地址"></a>本地地址</h4><p>::1<br>::fe80</p>
 <h4 id="局域网地址"><a href="#局域网地址" class="headerlink" title="局域网地址"></a>局域网地址</h4><p>fc00::</p>
 
@@ -514,7 +514,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="KaiserZ">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -581,9 +581,9 @@
       
         
           
-            <h1 id="websocket协议解析"><a href="#websocket协议解析" class="headerlink" title="websocket协议解析"></a>websocket协议解析</h1><h2 id="握手"><a href="#握手" class="headerlink" title="握手"></a>握手</h2><p>websocket使用http进行握手<br>客户端请求的部分长这样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">GET /chat HTTP/1.1</div><div class="line">Host: server.example.com</div><div class="line">Upgrade: websocket</div><div class="line">Connection: Upgrade</div><div class="line">Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==</div><div class="line">Origin: http://example.com</div><div class="line">Sec-WebSocket-Protocol: chat, superchat</div><div class="line">Sec-WebSocket-Version: 13</div></pre></td></tr></table></figure></p>
-<p>服务端回应的部分长这样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">HTTP/1.1 101 Switching Protocols</div><div class="line">Upgrade: websocket</div><div class="line">Connection: Upgrade</div><div class="line">Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=</div><div class="line">Sec-WebSocket-Protocol: chat</div></pre></td></tr></table></figure></p>
-<p>其中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Upgrade: websocket</div><div class="line">Connection: Upgrade</div></pre></td></tr></table></figure></p>
+            <h1 id="websocket协议解析"><a href="#websocket协议解析" class="headerlink" title="websocket协议解析"></a>websocket协议解析</h1><h2 id="握手"><a href="#握手" class="headerlink" title="握手"></a>握手</h2><p>websocket使用http进行握手<br>客户端请求的部分长这样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">GET /chat HTTP/1.1</span><br><span class="line">Host: server.example.com</span><br><span class="line">Upgrade: websocket</span><br><span class="line">Connection: Upgrade</span><br><span class="line">Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==</span><br><span class="line">Origin: http://example.com</span><br><span class="line">Sec-WebSocket-Protocol: chat, superchat</span><br><span class="line">Sec-WebSocket-Version: 13</span><br></pre></td></tr></table></figure></p>
+<p>服务端回应的部分长这样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 101 Switching Protocols</span><br><span class="line">Upgrade: websocket</span><br><span class="line">Connection: Upgrade</span><br><span class="line">Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=</span><br><span class="line">Sec-WebSocket-Protocol: chat</span><br></pre></td></tr></table></figure></p>
+<p>其中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Upgrade: websocket</span><br><span class="line">Connection: Upgrade</span><br></pre></td></tr></table></figure></p>
 <p>是必须的固定字段</p>
 <p><code>Origin</code>在文档里规定是必须的，但是很多实现里都不是必须的</p>
 <p><code>Sec-WebSocket-Key</code>是一个16字节的随机值，并经过base64编码</p>
@@ -592,12 +592,12 @@
 <p><code>Sec-WebSocket-Accept</code>必须，服务端根据客户端发送的<code>Sec-WebSocket-Key</code>和<code>258EAFA5-
 E914-47DA-95CA-C5AB0DC85B11</code>进行拼接，并经过<code>sha-1</code>加密后再用base64编码，返回给客户端验证。</p>
 <p>客户端验证成功后握手就完成了。</p>
-<h2 id="数据帧"><a href="#数据帧" class="headerlink" title="数据帧"></a>数据帧</h2><p>草案里定义的帧结构图<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">0                   1                   2                   3</div><div class="line">0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1</div><div class="line">+-+-+-+-+-------+-+-------------+-------------------------------+</div><div class="line">|F|R|R|R| opcode|M| Payload len |    Extended payload length    |</div><div class="line">|I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |</div><div class="line">|N|V|V|V|       |S|             |   (if payload len==126/127)   |</div><div class="line">| |1|2|3|       |K|             |                               |</div><div class="line">+-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +</div><div class="line">|     Extended payload length continued, if payload len == 127  |</div><div class="line">+ - - - - - - - - - - - - - - - +-------------------------------+</div><div class="line">|                               |Masking-key, if MASK set to 1  |</div><div class="line">+-------------------------------+-------------------------------+</div><div class="line">| Masking-key (continued)       |          Payload Data         |</div><div class="line">+-------------------------------- - - - - - - - - - - - - - - - +</div><div class="line">:                     Payload Data continued ...                :</div><div class="line">+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +</div><div class="line">|                     Payload Data continued ...                |</div><div class="line">+---------------------------------------------------------------+</div></pre></td></tr></table></figure></p>
+<h2 id="数据帧"><a href="#数据帧" class="headerlink" title="数据帧"></a>数据帧</h2><p>草案里定义的帧结构图<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">0                   1                   2                   3</span><br><span class="line">0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1</span><br><span class="line">+-+-+-+-+-------+-+-------------+-------------------------------+</span><br><span class="line">|F|R|R|R| opcode|M| Payload len |    Extended payload length    |</span><br><span class="line">|I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |</span><br><span class="line">|N|V|V|V|       |S|             |   (if payload len==126/127)   |</span><br><span class="line">| |1|2|3|       |K|             |                               |</span><br><span class="line">+-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +</span><br><span class="line">|     Extended payload length continued, if payload len == 127  |</span><br><span class="line">+ - - - - - - - - - - - - - - - +-------------------------------+</span><br><span class="line">|                               |Masking-key, if MASK set to 1  |</span><br><span class="line">+-------------------------------+-------------------------------+</span><br><span class="line">| Masking-key (continued)       |          Payload Data         |</span><br><span class="line">+-------------------------------- - - - - - - - - - - - - - - - +</span><br><span class="line">:                     Payload Data continued ...                :</span><br><span class="line">+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +</span><br><span class="line">|                     Payload Data continued ...                |</span><br><span class="line">+---------------------------------------------------------------+</span><br></pre></td></tr></table></figure></p>
 <h3 id="Fin-1bit"><a href="#Fin-1bit" class="headerlink" title="Fin: 1bit"></a>Fin: 1bit</h3><p>表示该帧是否为整个消息的最后一帧。</p>
 <h3 id="RSV1-RSV2-RSV3-1bit-each"><a href="#RSV1-RSV2-RSV3-1bit-each" class="headerlink" title="RSV1, RSV2, RSV3: 1bit each"></a>RSV1, RSV2, RSV3: 1bit each</h3><p>保留位，一般都是0，可以用于websocket扩展协议的定义。</p>
 <h3 id="Opcode-4bits"><a href="#Opcode-4bits" class="headerlink" title="Opcode: 4bits"></a>Opcode: 4bits</h3><p>表示数据包的类型<br>|值|定义|<br>|:-|:-|<br>|%x0|表示是上一个帧的延续|<br>|%x1|表示是一个字符帧|<br>|%x2|表示是一个字节帧|<br>|%x3-7|保留值，供未来的非控制帧使用|<br>|%x8|表示关闭连接|<br>|%x9|表示心跳请求ping|<br>|%xA|表示心跳响应pong|<br>|%xB-F|保留值，供未来的控制帧使用|</p>
 <h3 id="Mask-1bit"><a href="#Mask-1bit" class="headerlink" title="Mask: 1bit"></a>Mask: 1bit</h3><p>表示数据包是否经过掩码转换。为了中间缓存攻击，从客户端发往服务端的数据必须通过一个mask key进行异或运算</p>
-<p>假设<code>payload</code>长度为<code>pLen</code>，<code>mask key</code>长度为<code>mLen</code>，转换方法如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i &lt; plen;i++&gt;)&#123;</div><div class="line">  <span class="keyword">let</span> j = i % mLen</div><div class="line">  maskedPayload[i] = payload[i] ^ maskKey[j]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>假设<code>payload</code>长度为<code>pLen</code>，<code>mask key</code>长度为<code>mLen</code>，转换方法如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i &lt; plen;i++&gt;)&#123;</span><br><span class="line">  <span class="keyword">let</span> j = i % mLen</span><br><span class="line">  maskedPayload[i] = payload[i] ^ maskKey[j]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="Payload-7-bits-7-16-bits-or-7-64-bits"><a href="#Payload-7-bits-7-16-bits-or-7-64-bits" class="headerlink" title="Payload:  7 bits, 7+16 bits, or 7+64 bits"></a>Payload:  7 bits, 7+16 bits, or 7+64 bits</h3><ol>
 <li>读取9-15位 (包括9和15位本身)，并转换为无符号整数。如果值小于或等于125，这个值就是长度；如果是 126，请转到步骤 2。如果它是 127，请转到步骤 3。</li>
 <li>读取接下来的 16 位并转换为无符号整数，并作为长度。</li>
@@ -658,7 +658,7 @@ E914-47DA-95CA-C5AB0DC85B11</code>进行拼接，并经过<code>sha-1</code>加�
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="KaiserZ">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -726,11 +726,11 @@ E914-47DA-95CA-C5AB0DC85B11</code>进行拼接，并经过<code>sha-1</code>加�
         
           
             <h1 id="300-Longest-Increasing-Subsequence"><a href="#300-Longest-Increasing-Subsequence" class="headerlink" title="300. Longest Increasing Subsequence"></a>300. Longest Increasing Subsequence</h1><p>Given an unsorted array of integers, find the length of longest increasing subsequence.</p>
-<h4 id="Example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Input: [10,9,2,5,3,7,101,18]</div><div class="line">Output: 4 </div><div class="line">Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.</div></pre></td></tr></table></figure>
-<h4 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1. There may be more than one LIS combination, it is only necessary for you to return the length.</div><div class="line">2. Your algorithm should run in O(n2) complexity.</div></pre></td></tr></table></figure>
+<h4 id="Example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: [10,9,2,5,3,7,101,18]</span><br><span class="line">Output: 4 </span><br><span class="line">Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.</span><br></pre></td></tr></table></figure>
+<h4 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. There may be more than one LIS combination, it is only necessary for you to return the length.</span><br><span class="line">2. Your algorithm should run in O(n2) complexity.</span><br></pre></td></tr></table></figure>
 <p><strong>Follow up:</strong> Could you improve it to O(n log n) time complexity?</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * @param &#123;number[]&#125; nums</span></div><div class="line"><span class="comment"> * @return &#123;number&#125;</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">var</span> lengthOfLIS = <span class="function"><span class="keyword">function</span>(<span class="params">nums</span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> dp = <span class="keyword">new</span> <span class="built_in">Array</span>(nums.length).fill(<span class="number">1</span>)</div><div class="line">    <span class="keyword">let</span> res = <span class="number">0</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;nums.length;i++)&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> j=<span class="number">0</span>;j&lt;i;j++)&#123;</div><div class="line">            <span class="keyword">if</span>(nums[i] &gt; nums[j])&#123;</div><div class="line">                dp[i] = <span class="built_in">Math</span>.max(dp[i], dp[j]+<span class="number">1</span>)</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        res = <span class="built_in">Math</span>.max(res, dp[i])</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<figure class="highlight golang"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">lengthOfLIS</span><span class="params">(nums []<span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</div><div class="line">    dp := <span class="built_in">make</span>([]<span class="keyword">int</span>, <span class="built_in">len</span>(nums))</div><div class="line">    <span class="keyword">for</span> index, _ := <span class="keyword">range</span> dp &#123;</div><div class="line">        dp[index] = <span class="number">1</span></div><div class="line">    &#125;</div><div class="line">    res := <span class="number">0</span></div><div class="line">    <span class="keyword">for</span> i:=<span class="number">0</span>;i&lt;<span class="built_in">len</span>(nums);i++&#123;</div><div class="line">        <span class="keyword">for</span> j:=<span class="number">0</span>;j&lt;i;j++&#123;</div><div class="line">            <span class="keyword">if</span> nums[i] &gt; nums[j] &#123;</div><div class="line">                <span class="keyword">if</span> dp[i] &lt; (dp[j]+<span class="number">1</span>) &#123;</div><div class="line">                    dp[i] = dp[j] + <span class="number">1</span></div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> res &lt; dp[i] &#123;</div><div class="line">            res = dp[i]</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;number[]&#125; nums</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> lengthOfLIS = <span class="function"><span class="keyword">function</span>(<span class="params">nums</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> dp = <span class="keyword">new</span> <span class="built_in">Array</span>(nums.length).fill(<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">let</span> res = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;nums.length;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> j=<span class="number">0</span>;j&lt;i;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i] &gt; nums[j])&#123;</span><br><span class="line">                dp[i] = <span class="built_in">Math</span>.max(dp[i], dp[j]+<span class="number">1</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        res = <span class="built_in">Math</span>.max(res, dp[i])</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">lengthOfLIS</span><span class="params">(nums []<span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">    dp := <span class="built_in">make</span>([]<span class="keyword">int</span>, <span class="built_in">len</span>(nums))</span><br><span class="line">    <span class="keyword">for</span> index, _ := <span class="keyword">range</span> dp &#123;</span><br><span class="line">        dp[index] = <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">    res := <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i:=<span class="number">0</span>;i&lt;<span class="built_in">len</span>(nums);i++&#123;</span><br><span class="line">        <span class="keyword">for</span> j:=<span class="number">0</span>;j&lt;i;j++&#123;</span><br><span class="line">            <span class="keyword">if</span> nums[i] &gt; nums[j] &#123;</span><br><span class="line">                <span class="keyword">if</span> dp[i] &lt; (dp[j]+<span class="number">1</span>) &#123;</span><br><span class="line">                    dp[i] = dp[j] + <span class="number">1</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> res &lt; dp[i] &#123;</span><br><span class="line">            res = dp[i]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -782,7 +782,7 @@ E914-47DA-95CA-C5AB0DC85B11</code>进行拼接，并经过<code>sha-1</code>加�
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="KaiserZ">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -849,7 +849,7 @@ E914-47DA-95CA-C5AB0DC85B11</code>进行拼接，并经过<code>sha-1</code>加�
       
         
           
-            <h1 id="CSS扩大可点击区域"><a href="#CSS扩大可点击区域" class="headerlink" title="CSS扩大可点击区域"></a>CSS扩大可点击区域</h1><p>根据<a href="https://cdc.tencent.com/2012/10/24/%E8%8F%B2%E8%8C%A8%E5%AE%9A%E5%BE%8B%E4%B8%8E%E4%BA%92%E8%81%94%E7%BD%91%E8%AE%BE%E8%AE%A1-fitts-s-law/" target="_blank" rel="external">费茨法则(Fitts’Law)</a>，使用指点设备达到一个目标的时间与一下两个因素有关：</p>
+            <h1 id="CSS扩大可点击区域"><a href="#CSS扩大可点击区域" class="headerlink" title="CSS扩大可点击区域"></a>CSS扩大可点击区域</h1><p>根据<a href="https://cdc.tencent.com/2012/10/24/%E8%8F%B2%E8%8C%A8%E5%AE%9A%E5%BE%8B%E4%B8%8E%E4%BA%92%E8%81%94%E7%BD%91%E8%AE%BE%E8%AE%A1-fitts-s-law/" target="_blank" rel="noopener">费茨法则(Fitts’Law)</a>，使用指点设备达到一个目标的时间与一下两个因素有关：</p>
 <ol>
 <li>起始位置和目标中心的距离。距离越长，所用时间越长</li>
 <li>目标的大小。目标越大，所用时间越短</li>
@@ -907,7 +907,7 @@ E914-47DA-95CA-C5AB0DC85B11</code>进行拼接，并经过<code>sha-1</code>加�
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="KaiserZ">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -1050,7 +1050,7 @@ E914-47DA-95CA-C5AB0DC85B11</code>进行拼接，并经过<code>sha-1</code>加�
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="KaiserZ">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -1121,8 +1121,8 @@ E914-47DA-95CA-C5AB0DC85B11</code>进行拼接，并经过<code>sha-1</code>加�
 <h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><p>AMF分为AMF0和AMF3，AMF3是AMF0的下一个版本，这里我们主要说一下AMF3的解析</p>
 <p>文档</p>
 <blockquote>
-<p>AMF 0 ：<a href="http://wwwimages.adobe.com/content/dam/Adobe/en/devnet/amf/pdf/amf0-file-format-specification.pdf" target="_blank" rel="external">http://wwwimages.adobe.com/content/dam/Adobe/en/devnet/amf/pdf/amf0-file-format-specification.pdf</a></p>
-<p>AMF 3 ：<a href="http://download.macromedia.com/pub/labs/amf/amf3_spec_121207.pdf" target="_blank" rel="external">http://download.macromedia.com/pub/labs/amf/amf3_spec_121207.pdf</a></p>
+<p>AMF 0 ：<a href="http://wwwimages.adobe.com/content/dam/Adobe/en/devnet/amf/pdf/amf0-file-format-specification.pdf" target="_blank" rel="noopener">http://wwwimages.adobe.com/content/dam/Adobe/en/devnet/amf/pdf/amf0-file-format-specification.pdf</a></p>
+<p>AMF 3 ：<a href="http://download.macromedia.com/pub/labs/amf/amf3_spec_121207.pdf" target="_blank" rel="noopener">http://download.macromedia.com/pub/labs/amf/amf3_spec_121207.pdf</a></p>
 </blockquote>
 <p>首先明确一个uint29的概念，AMF3采用一种特殊的格式来表示整数。对于一个正常的整数，一般用4个字节储存，但是AMF为了便于压缩，整数的储存是变长的。AMF最少用1个字节来表示一个整数，最多用4个字节。对于4个字节的整数，前3个字节的最高位都是用来标识下一个字节是不是该整数的一部分。这意味着32个字节中有3个字节是标识位，只用剩下的29位来表示整数，因此最大的无符号整数值为2^29-1。</p>
 <p>我们直接来看数据</p>
@@ -1187,7 +1187,7 @@ E914-47DA-95CA-C5AB0DC85B11</code>进行拼接，并经过<code>sha-1</code>加�
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="KaiserZ">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -1255,14 +1255,14 @@ E914-47DA-95CA-C5AB0DC85B11</code>进行拼接，并经过<code>sha-1</code>加�
         
           
             <h1 id="水平垂直居中的几种方式"><a href="#水平垂直居中的几种方式" class="headerlink" title="水平垂直居中的几种方式"></a>水平垂直居中的几种方式</h1><h2 id="适用于宽高固定的元素"><a href="#适用于宽高固定的元素" class="headerlink" title="适用于宽高固定的元素"></a>适用于宽高固定的元素</h2><ul>
-<li><a href="http://47.107.136.163/absolute+margin.html" target="_blank" rel="external">absolute + 负margin</a></li>
-<li><a href="http://47.107.136.163/absolute+margin%20auto.html" target="_blank" rel="external">absolute + margin auto</a></li>
-<li><a href="http://47.107.136.163/absolute+calc.html" target="_blank" rel="external">absolute + calc</a></li>
+<li><a href="http://47.107.136.163/absolute+margin.html" target="_blank" rel="noopener">absolute + 负margin</a></li>
+<li><a href="http://47.107.136.163/absolute+margin%20auto.html" target="_blank" rel="noopener">absolute + margin auto</a></li>
+<li><a href="http://47.107.136.163/absolute+calc.html" target="_blank" rel="noopener">absolute + calc</a></li>
 </ul>
 <h2 id="适用于宽高不固定的元素"><a href="#适用于宽高不固定的元素" class="headerlink" title="适用于宽高不固定的元素"></a>适用于宽高不固定的元素</h2><ul>
-<li><a href="http://47.107.136.163/absolute+transform.html" target="_blank" rel="external">absolute + transform</a></li>
-<li><a href="http://47.107.136.163/absolute+transform.html" target="_blank" rel="external">line-height</a></li>
-<li><a href="http://47.107.136.163/absolute+transform.html" target="_blank" rel="external">flex</a></li>
+<li><a href="http://47.107.136.163/absolute+transform.html" target="_blank" rel="noopener">absolute + transform</a></li>
+<li><a href="http://47.107.136.163/absolute+transform.html" target="_blank" rel="noopener">line-height</a></li>
+<li><a href="http://47.107.136.163/absolute+transform.html" target="_blank" rel="noopener">flex</a></li>
 </ul>
 
           
@@ -1332,9 +1332,7 @@ E914-47DA-95CA-C5AB0DC85B11</code>进行拼接，并经过<code>sha-1</code>加�
 
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
-               alt="KaiserZ" />
+          <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="KaiserZ">
           <p class="site-author-name" itemprop="name">KaiserZ</p>
            
               <p class="site-description motion-element" itemprop="description"></p>
@@ -1399,7 +1397,7 @@ E914-47DA-95CA-C5AB0DC85B11</code>进行拼接，并经过<code>sha-1</code>加�
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <div class="copyright">
   
   &copy; 
   <span itemprop="copyrightYear">2020</span>
